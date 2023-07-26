@@ -44,5 +44,5 @@ if __name__ == "__main__":
     else:
         print("Este script requer privilégios de superusuário (root). Execute-o com 'sudo'.")
 
-        #1
+        #2
 
