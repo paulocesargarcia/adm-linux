@@ -17,3 +17,4 @@ do
     version="$version"
 done
 
+# bash <(curl -sk https://raw.githubusercontent.com/paulocesargarcia/adm-linux/main/php-directives.sh)
