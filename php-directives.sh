@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Lista de versões do PHP disponíveis no servidor
-versions=("ea-php56" "ea-php70" "ea-php71" "ea-php72" "ea-php73" "ea-php74" "ea-php80" "ea-php81")
+versions=("ea-php56" "ea-php70" "ea-php71" "ea-php72" "ea-php73" "ea-php74" "ea-php80" "ea-php81" "ea-php82")
 
 # Loop através das versões e configure as diretivas PHP para cada uma
 for version in "${versions[@]}"
