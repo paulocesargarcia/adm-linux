@@ -4,19 +4,19 @@ OUTPUT_FILE="senhas_usuarios_cpanel.txt"
 USERS=$(cat /etc/trueuserowners | cut -d: -f1)
 
 for USER in $USERS; do
-    # Ignorar o usuário "root"
+    # Ignorar o usuario "root"
     if [ "$USER" != "root" ]; then
         NEW_PASSWORD=$(openssl rand -base64 12)
-        #whmapi1 passwd user="$USER" password="$NEW_PASSWORD"
+        whmapi1 passwd user="$USER" password="$NEW_PASSWORD"
         DOMAIN=$(whmapi1 accountsummary user="$USER" | grep "domain:" | awk '{print $2}')
-        echo "Domínio: $DOMAIN, Usuário: $USER, Senha: $NEW_PASSWORD" >> "$OUTPUT_FILE"
+        echo "Dominio: $DOMAIN, Usuario: $USER, Senha: $NEW_PASSWORD" >> "$OUTPUT_FILE"
         echo "Senha alterada para $USER"
     else
-        echo "Ignorando usuário root."
+        echo "Ignorando usuario root."
     fi
 done
 
-echo "Concluído. Dados salvos em $OUTPUT_FILE"
+echo "Concluido. Dados salvos em $OUTPUT_FILE"
 
 
 
