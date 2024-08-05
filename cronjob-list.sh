@@ -8,3 +8,6 @@ for i in $(cut -d : -f 1 /etc/trueuserowners); do
         echo "$data_cron";
     fi
 done
+
+
+# ns53 "bash <(curl -sk https://raw.githubusercontent.com/paulocesargarcia/adm-linux/main/cronjob-list.sh)" > ns53-log.txt
